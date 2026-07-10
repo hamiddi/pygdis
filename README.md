@@ -35,11 +35,8 @@ $$
 and the final bounded score is
 
 $$
-\mathrm{GDIS}(p)
-=
-1-\exp\!\left[-\Phi(p)\right],
-\qquad
-0 \le \mathrm{GDIS}(p) \le 1.
+\mathrm{GDIS}(p)=1-\exp\!\left[-\Phi(p)\right],
+\qquad 0 \leq \mathrm{GDIS}(p) \leq 1.
 $$
 
 The sustained term combines local Jacobian instability, trajectory stretching, attractor expansion, entropy complexity, and temporal persistence. The transition term measures parameter-dependent changes in the physical channels near a critical region.
