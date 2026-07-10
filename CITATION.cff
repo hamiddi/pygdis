@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use pyGDIS, please cite this software and the associated GDIS publication."
+title: "pyGDIS: Generalized Dynamical Instability Score"
+version: 0.1.0
+date-released: 2026-07-09
+authors:
+  - family-names: Ismail
+    given-names: Hamid D.
+  - family-names: Harb
+    given-names: Ahmed
+  - family-names: Bikdash
+    given-names: Marwan
+license: MIT
+repository-code: "https://github.com/hamiddi/pygdis"
