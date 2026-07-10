@@ -39,7 +39,7 @@ $$
 =
 1-e^{-\Phi(p)},
 \qquad
-0\le \mathrm{GDIS}\le1.
+0 \le \mathrm{GDIS}(p) \le 1.
 $$
 
 The sustained term combines local Jacobian instability, trajectory stretching, attractor expansion, entropy complexity, and temporal persistence. The transition term measures parameter-dependent changes in the physical channels near a critical region.
