@@ -27,7 +27,7 @@ The GDIS potential is
 
 $$
 \Phi(p)=
--\log\!\left(1-I_{\mathrm{sustained}}(p)\right)
+-\log\left(1-I_{\mathrm{sustained}}(p)\right)
 +
 I_{\mathrm{transition}}(p)
 $$
@@ -35,7 +35,7 @@ $$
 and the final bounded score is
 
 $$
-\mathrm{GDIS}(p)=1-\exp\!\left[-\Phi(p)\right],
+\mathrm{GDIS}(p)=1-\exp\left[-\Phi(p)\right],
 \qquad 0 \leq \mathrm{GDIS}(p) \leq 1.
 $$
 
