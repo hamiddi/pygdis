@@ -80,6 +80,23 @@ $$
 
 The sustained term combines local Jacobian instability, trajectory stretching, attractor expansion, entropy complexity, and temporal persistence. The transition term measures parameter-dependent changes in the physical channels near a critical region.
 
+## Mathematical Background
+
+For a complete mathematical formulation, theoretical derivation, algorithmic details, and validation of the Generalized Dynamical Instability Score (GDIS), please refer to the accompanying research paper:
+
+> **Hamid D. Ismail, Ahmed Harb, and Marwan Bikdash.**  
+> *Generalized Dynamical Instability Score (GDIS): A Universal Framework for Quantifying Instability and Critical Transitions in Nonlinear Dynamical Systems.* *(Under review / Preprint / Journal information)*
+
+The paper provides:
+
+- The theoretical motivation behind GDIS.
+- Complete mathematical derivation of the instability potential.
+- Derivation of the bounded GDIS transformation.
+- Interpretation of each component of the score.
+- Computational algorithm and implementation details.
+- Validation against Lyapunov exponents, finite-time Lyapunov exponents (FTLE), bifurcation diagrams, recurrence analysis, entropy-based measures, and multiple benchmark chaotic systems.
+- Discussion of theoretical properties, limitations, and potential applications.
+
 ## Repository structure
 
 ```text
