@@ -25,15 +25,22 @@ Potential applications include chaotic benchmark systems, phase-locked loops, po
 
 The GDIS potential is
 
-\[
-\Phi(p)=-\log\left(1-I_{\mathrm{sustained}}(p)\right)+I_{\mathrm{transition}}(p),
-\]
+$$
+\Phi(p)=
+-\log\!\left(1-I_{\mathrm{sustained}}(p)\right)
++
+I_{\mathrm{transition}}(p)
+$$
 
 and the final bounded score is
 
-\[
-\mathrm{GDIS}(p)=1-e^{-\Phi(p)}, \qquad 0\leq \mathrm{GDIS}\leq 1.
-\]
+$$
+\mathrm{GDIS}(p)
+=
+1-e^{-\Phi(p)},
+\qquad
+0\le \mathrm{GDIS}\le1.
+$$
 
 The sustained term combines local Jacobian instability, trajectory stretching, attractor expansion, entropy complexity, and temporal persistence. The transition term measures parameter-dependent changes in the physical channels near a critical region.
 
