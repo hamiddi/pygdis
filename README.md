@@ -37,7 +37,7 @@ and the final bounded score is
 $$
 \mathrm{GDIS}(p)
 =
-1-e^{-\Phi(p)},
+1-\exp\!\left[-\Phi(p)\right],
 \qquad
 0 \le \mathrm{GDIS}(p) \le 1.
 $$
