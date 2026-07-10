@@ -1,4 +1,12 @@
+<p align="center">
+  <img src="docs/images/pygdis_logo.png" width="220">
+</p>
 # pyGDIS
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-README-blue)](README.md)
+[![GitHub Stars](https://img.shields.io/github/stars/hamiddi/pygdis?style=social)](https://github.com/hamiddi/pygdis)
+![Method](https://img.shields.io/badge/Method-Generalized%20Dynamical%20Instability%20Score-blueviolet)
 
 **pyGDIS** is an open-source Python package implementing the **Generalized Dynamical Instability Score (GDIS)**, a bounded, physics-informed score for detecting and quantifying instability, critical transitions, and chaotic behavior in nonlinear dynamical systems.
 
@@ -8,18 +16,39 @@
 - **Ahmed Harb**
 - **Marwan Bikdash**
 
-## What GDIS is used for
+## What GDIS is Used For
 
-GDIS is intended for ordered collections of trajectories generated while a control parameter changes. It can be used to:
+The **Generalized Dynamical Instability Score (GDIS)** is a universal framework for quantifying instability and identifying critical dynamical transitions in nonlinear systems. Designed to be independent of any specific mathematical model, GDIS provides a normalized instability score that enables consistent comparison across different dynamical systems and datasets.
 
-- identify stable, near-critical, and unstable operating regimes;
-- detect bifurcation and transition regions;
-- compare instability across nonlinear systems using a bounded score;
-- evaluate sustained instability separately from localized transition energy;
-- validate instability against Lyapunov exponents, bifurcation diagrams, and other references;
-- analyze equation-based simulations and data-only experimental trajectories.
+GDIS can be used to:
 
-Potential applications include chaotic benchmark systems, phase-locked loops, power-system stability, nonlinear circuits, mechanical oscillators, climate and ecological dynamics, and biological or transcriptomic state transitions.
+- **Quantify dynamical instability** using a bounded score between 0 (fully stable) and 1 (highly unstable).
+- **Identify stable, near-critical, and chaotic regimes** from parameter sweeps or time-series trajectories.
+- **Detect bifurcations and critical transitions** before large-scale qualitative changes in system behavior occur.
+- **Provide early-warning indicators** for the onset of instability in complex nonlinear systems.
+- **Separate sustained instability from transient transition effects**, allowing continuous instability and localized transition dynamics to be analyzed independently.
+- **Compare instability across different systems** using a common, dimensionless metric.
+- **Validate instability predictions** against established measures such as Lyapunov exponents, finite-time Lyapunov exponents (FTLE), bifurcation diagrams, recurrence analysis, entropy measures, and other nonlinear dynamical indicators.
+- **Analyze both model-based simulations and experimental or observational data**, requiring only ordered trajectories generated along a control parameter or time evolution.
+
+### Applications
+
+GDIS is applicable to a wide range of nonlinear dynamical systems, including:
+
+- Chaotic benchmark systems (Lorenz, Rössler, Chen, Logistic map, and others)
+- Phase-Locked Loops (PLLs) and synchronization systems
+- Electric power systems and voltage stability analysis
+- Nonlinear electronic circuits
+- Mechanical and structural vibration systems
+- Robotics and autonomous control systems
+- Fluid dynamics and turbulence
+- Climate and Earth system dynamics
+- Ecological and population dynamics
+- Financial and economic time-series analysis
+- Biological systems and gene regulatory networks
+- Single-cell transcriptomics and cell-state transition analysis
+- Biomedical systems and disease progression modeling
+- Any parameterized nonlinear dynamical system exhibiting critical transitions or chaotic behavior
 
 ## Mathematical definition
 
