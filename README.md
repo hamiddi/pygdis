@@ -1,15 +1,30 @@
 <p align="center">
   <img src="docs/images/pygdis_logo.png" width="120">
 </p>
+
 # pyGDIS
 
-**pyGDIS** is an open-source Python package implementing the **Generalized Dynamical Instability Score (GDIS)**, a bounded, physics-informed score for detecting and quantifying instability, critical transitions, and chaotic behavior in nonlinear dynamical systems.
+### Generalized Dynamical Instability Score (GDIS)
+
+*A Python package for universal instability quantification, critical transition detection, and chaos analysis.*
+
+---
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-README-blue)](README.md)
+[![GitHub Stars](https://img.shields.io/github/stars/hamiddi/pygdis?style=social)](https://github.com/hamiddi/pygdis)
+---
 
 ## Authors
 
 - **Hamid D. Ismail**
 - **Ahmed Harb**
 - **Marwan Bikdash**
+
+## Overview
+
+**pyGDIS** is an open-source Python package implementing the **Generalized Dynamical Instability Score (GDIS)**, a bounded, physics-informed score for detecting and quantifying instability, critical transitions, and chaotic behavior in nonlinear dynamical systems.
+
 
 ## What GDIS is Used For
 
