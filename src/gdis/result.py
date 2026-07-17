@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Dict
+from dataclasses import dataclass, field
+from typing import Any, Dict
 
 import numpy as np
 import pandas as pd
@@ -17,6 +17,7 @@ class GDISResult:
     sustained_instability: np.ndarray
     transition_instability: np.ndarray
     components: Dict[str, np.ndarray]
+    metadata: Dict[str, Any] = field(default_factory=dict)
 
     def to_dataframe(self) -> pd.DataFrame:
         data = {
@@ -31,4 +32,5 @@ class GDISResult:
 
     def plot(self, **kwargs):
         from .plotting import plot_gdis
+
         return plot_gdis(self, **kwargs)

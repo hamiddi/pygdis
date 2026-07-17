@@ -1,14 +1,28 @@
 cff-version: 1.2.0
-message: "If you use pyGDIS, please cite this software and the associated GDIS publication."
+message: "If you use pyGDIS, please cite this software and the companion manuscript when available."
 title: "pyGDIS: Generalized Dynamical Instability Score"
-version: 0.1.0
-date-released: 2026-07-09
+type: software
 authors:
   - family-names: Ismail
     given-names: Hamid D.
+    email: hdismail@ncat.edu
   - family-names: Harb
-    given-names: Ahmed
+    given-names: Ahmad
   - family-names: Bikdash
     given-names: Marwan
-license: MIT
+version: 1.0.0
+date-released: 2026-07-16
 repository-code: "https://github.com/hamiddi/pygdis"
+url: "https://github.com/hamiddi/pygdis"
+license: MIT
+keywords:
+  - nonlinear dynamics
+  - dynamical instability
+  - chaos
+  - critical transitions
+  - bifurcation
+  - scientific computing
+abstract: >-
+  pyGDIS is the reference Python implementation of the Generalized Dynamical
+  Instability Score, a descriptor-based framework for bounded instability
+  quantification and localized transition analysis.

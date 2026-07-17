@@ -1,35 +1,79 @@
-# GDIS Mathematics
+# GDIS mathematics
 
-The physical core is
+pyGDIS implements the reference formulation described in the companion manuscript.
 
-\[
-C=\left(J_s^{\alpha_J}S_s^{\alpha_S}A_s^{\alpha_A}\right)^{1/(\alpha_J+\alpha_S+\alpha_A)}.
-\]
+## Descriptor transformation
 
-The sustained functional is
+The raw principal descriptors `J`, `S`, and `A` are logarithmically compressed, robustly scaled by their 5th and 95th percentiles, clipped to `[0, 1]`, and exponentially saturated.
 
-\[
-I_{\mathrm{sustained}}=\frac{X^\gamma}{X^\gamma+c},
-\qquad
-X=C(1+\eta_HH)(1+\eta_TT).
-\]
+The robust normalization operator is
 
-Transition energy is
+$$
+\widehat D=\operatorname{clip}\left(\frac{D-P_5(D)}{P_{95}(D)-P_5(D)},0,1\right).
+$$
 
-\[
-E_{\mathrm{transition}}=\sqrt{(dJ/dp)^2+(dS/dp)^2+(dA/dp)^2}.
-\]
+It is invariant to positive affine transformations of its input descriptor.
 
-The localized transition term is
+## Core sustained-instability measure
 
-\[
-I_{\mathrm{transition}}=\lambda E_{\mathrm{transition}}W(p).
-\]
+$$
+C=\left(\widetilde J^{\alpha_J}\widetilde S^{\alpha_S}\widetilde A^{\alpha_A}\right)^{1/(\alpha_J+\alpha_S+\alpha_A)},
+$$
 
-The instability potential and score are
+with the fixed reference exponents
 
-\[
-\Phi=-\log(1-I_{\mathrm{sustained}})+I_{\mathrm{transition}},
-\qquad
-\mathrm{GDIS}=1-e^{-\Phi}.
-\]
+$$
+\alpha_J=0.42,\qquad \alpha_S=0.33,\qquad \alpha_A=0.25.
+$$
+
+Complexity and persistence modulate the core:
+
+$$
+X=C(1+\eta_H\widehat H)(1+\eta_T\widehat T).
+$$
+
+The sustained-instability functional is obtained using Hill saturation:
+
+$$
+I_{\mathrm{sustained}}=\frac{X^\gamma}{X^\gamma+c}.
+$$
+
+## Transition localization
+
+The normalized transition energy is based on descriptor variation over the ordered control parameter:
+
+$$
+E_{\mathrm{transition}}=\sqrt{\left|\frac{d\widehat J}{dp}\right|^2+\left|\frac{d\widehat S}{dp}\right|^2+\left|\frac{d\widehat A}{dp}\right|^2}.
+$$
+
+A Gaussian window localizes transition activity around a supplied or estimated critical parameter:
+
+$$
+W(p)=\exp\left[-\frac{1}{2}\left(\frac{p-p_c}{\sigma_p}\right)^2\right].
+$$
+
+pyGDIS stores the unweighted term
+
+$$
+I_{\mathrm{transition,base}}=E_{\mathrm{transition}}W(p)
+$$
+
+and applies the configurable transition weight `lambda_t` only at final aggregation.
+
+## Instability potential and score
+
+$$
+\Phi=-\ln(1-I_{\mathrm{sustained}})+\lambda_t I_{\mathrm{transition,base}},
+$$
+
+$$
+\mathrm{GDIS}=1-e^{-\Phi},\qquad 0\leq\mathrm{GDIS}<1.
+$$
+
+When `lambda_t = 0`, the mapping is baseline preserving:
+
+$$
+\mathrm{GDIS}=I_{\mathrm{sustained}}.
+$$
+
+The implementation defaults to `lambda_t = 0.18`, matching the manuscript reference configuration.

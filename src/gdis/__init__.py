@@ -1,5 +1,8 @@
-from .score import GDIS, GDISConfig
-from .result import GDISResult
+"""pyGDIS: Generalized Dynamical Instability Score."""
 
-__all__ = ["GDIS", "GDISConfig", "GDISResult"]
-__version__ = "0.1.0"
+from .result import GDISResult
+from .score import GDIS, GDISConfig
+from .sensitivity import transition_weight_sensitivity
+
+__all__ = ["GDIS", "GDISConfig", "GDISResult", "transition_weight_sensitivity"]
+__version__ = "1.0.0"
